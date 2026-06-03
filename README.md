@@ -1,5 +1,11 @@
 # SDT — Snowflake Data Tools
 
+![Snowflake Data Tools](./assets/hero.png)
+
+[![Marketplace](https://img.shields.io/visual-studio-marketplace/v/sdt-ddt-tools.sdt-vscode?label=VS%20Code%20Marketplace&color=2E6FA8)](https://marketplace.visualstudio.com/items?itemName=sdt-ddt-tools.sdt-vscode)
+[![Installs](https://img.shields.io/visual-studio-marketplace/i/sdt-ddt-tools.sdt-vscode?color=2E6FA8)](https://marketplace.visualstudio.com/items?itemName=sdt-ddt-tools.sdt-vscode)
+[![CLI on npm](https://img.shields.io/npm/v/@sdt-tools%2Fcli?label=%40sdt-tools%2Fcli&logo=npm&color=CB3837)](https://www.npmjs.com/package/@sdt-tools/cli)
+
 **Declarative schema management for Snowflake, from VS Code and the CLI.** Author your schema as `.sql` files, compare them against a live account, and deploy with a safety classifier that refuses to do dangerous things silently.
 
 > **Public Beta** — all features are free during the 30-day beta. AI features are bring-your-own-API-key. See [Beta program](#beta-program) below.
@@ -22,9 +28,23 @@ It is, in short, what Microsoft's SQL Database Projects / SqlPackage are for SQL
 - **Object Explorer, lint, format, lineage, drift check, deploy history, IntelliSense.**
 - **AI assist (bring your own key)** — sketch objects from a description, suggest safer alternatives for risky changes, and an "Ask SDT" chat panel.
 
+## See it in action
+
+**Schema compare with a safety verdict on every change** — `SAFE` / `DESTRUCTIVE` / `EXPENSIVE` / `UNRECOVERABLE`, before anything touches your live account:
+
+![Schema Compare demo](./assets/demo-compare.gif)
+
+**Deploys that refuse to destroy data silently** — destructive changes come out blocked as comments until you opt in, and a zero-copy clone makes every deploy one command away from rollback:
+
+![Safe deploy demo](./assets/demo-deploy.gif)
+
+**Reverse-engineer an entire account in seconds** — one command, one `.sql` file per object, ready for git:
+
+![Extract demo](./assets/demo-extract.gif)
+
 ## Install
 
-- **VS Code extension:** install **SDT — Snowflake Data Tools** from the VS Code Marketplace — _(marketplace link: coming with the beta listing)_.
+- **VS Code extension:** install [**SDT — Snowflake Data Tools**](https://marketplace.visualstudio.com/items?itemName=sdt-ddt-tools.sdt-vscode) from the VS Code Marketplace.
 - **CLI:**
 
   ```sh
