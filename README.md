@@ -48,6 +48,8 @@ It is, in short, what Microsoft's SQL Database Projects / SqlPackage are for SQL
 
 ▶ [Watch the 60-second demo on YouTube](https://youtu.be/8aZ4P8WaRjM)
 
+📺 **More demos** on the [SDT & DDT YouTube channel](https://www.youtube.com/channel/UCc3L8L8BBOO9lVLI1V2FFNQ) — subscribe to catch new ones.
+
 ## Documentation
 
 **[📚 Full documentation →](./docs/README.md)**
