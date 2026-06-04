@@ -57,7 +57,7 @@ Structured output goes to stdout; logs go to stderr. In non-interactive mode (no
 
 ## Output formats
 
-`--output table | json | yaml | sql` controls the global format. Several commands also take `--format text | json | markdown | sarif` (lint, diagnose) or `--format table | json | markdown` (compare, cost-estimate). SARIF output is consumable by GitHub code-scanning and Azure DevOps.
+`--output table | json | yaml | sql` controls the global format. Several commands also take `--format text | json | markdown | sarif` (lint, diagnose), `--format json | summary | markdown` (compare, default `summary`), or `--format table | json | markdown` (cost-estimate). SARIF output is consumable by GitHub code-scanning and Azure DevOps.
 
 ---
 
@@ -70,7 +70,7 @@ The everyday loop: author a `.sdtproj`, build it to a `.sdtpac`, deploy it, obse
 | `sdt init` | Scaffold a new project (`<name>.sdtproj` + folder layout). | `--name`, `--scope account\|database\|schema`, `--db`, `--schema`, `--dir` |
 | `sdt validate` | Schema-shape check; with `--references` runs the build-time semantic resolver. | `--project`, `--references`, `--columns`, `--check-variables`, `--min-severity`, `--format`, `--out` |
 | `sdt extract` | Reverse-engineer a live account into per-object `.sql` files. | `--connection`, `--types`, `--output` |
-| `sdt build` | Compile a `.sdtproj` to a `.sdtpac` build artifact. | `-o, --out` |
+| `sdt build` | Compile a `.sdtproj` to a `.sdtpac` build artifact. | `-p, --project` (required), `-o, --out` |
 | `sdt publish` | Deploy a `.sdtpac` to a connection; honors every safety gate. | `--pac`, `--connection`, `--dry-run`, `--apply`, `--yes`, `--manifest`, `--confirm-production`, `--profile`, `--variables`, `--restore-from-snapshot`, `--map`, `--map-file` |
 | `sdt compare` | Diff any two of project / pac / live account. | `--format`, `--explain`, `--color`, `--ignore-case`, `--no-slice`, `--type-safe`, `--break-on`, `--write-impact`, `--map`, `--map-file`, `--no-history` |
 | `sdt drift` | Compare the live warehouse to what the project expects; report only. | `--project`, `--connection` |

@@ -149,7 +149,7 @@ sdt connection add \
   --name dev \
   --account xy12345.us-east-1.aws \
   --user my.name@company.com \
-  --auth external-browser \
+  --auth EXTERNAL_BROWSER \
   --role SDT_DEV \
   --warehouse XS_DEV_WH \
   --database DEV_ANALYTICS
@@ -165,7 +165,7 @@ sdt connection add \
   --name local \
   --account xy12345 \
   --user TEST_USER \
-  --auth password \
+  --auth PASSWORD \
   --password env:SNOWFLAKE_PASSWORD \
   --role TEST_ROLE \
   --warehouse XS_WH
@@ -183,7 +183,7 @@ sdt connection add \
   --name mfa-dev \
   --account xy12345 \
   --user MY_USER \
-  --auth mfa \
+  --auth MFA \
   --password env:SNOWFLAKE_PASSWORD \
   --role MY_ROLE \
   --warehouse XS_WH
@@ -204,14 +204,16 @@ sdt connection add \
   --name oauth-prod \
   --account xy12345 \
   --user MY_USER \
-  --auth oauth \
-  --token env:SNOWFLAKE_OAUTH_TOKEN \
+  --auth OAUTH \
+  --password env:SNOWFLAKE_OAUTH_TOKEN \
   --role SDT_DEPLOY \
   --warehouse XS_OPS_WH
 ```
 
 > [!NOTE]
-> SDT does not refresh the token for you — fetch a fresh one before each run.
+> The OAUTH bearer token is supplied through `--password` (there is no separate
+> `--token` flag on `sdt connection add`). SDT does not refresh the token for
+> you — fetch a fresh one before each run.
 
 ---
 
@@ -222,7 +224,7 @@ Any secret-bearing flag accepts an `env:VAR_NAME` placeholder. SDT reads the val
 ```sh
 --key-passphrase env:SNOWFLAKE_PRIVATE_KEY_PASSPHRASE
 --password env:SNOWFLAKE_PASSWORD
---token env:SNOWFLAKE_OAUTH_TOKEN
+--password env:SNOWFLAKE_OAUTH_TOKEN   # OAUTH supplies its token via --password
 ```
 
 On Windows, secrets can also resolve from the Credential Manager via the `keyring:<name>` placeholder.

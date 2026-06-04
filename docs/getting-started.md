@@ -113,7 +113,7 @@ Compare diffs two sources — a project, a built `.sdtpac` artifact, or a live a
 Make a change first. Edit a table file in the project — say, add a column to `fact_sales.sql`. Then build a pac and compare it to the live account:
 
 ```sh
-sdt build ./SampleAnalytics.sdtproj
+sdt build -p ./SampleAnalytics.sdtproj
 # Built ./bin/SampleAnalytics.sdtpac
 
 sdt compare ./SampleAnalytics.sdtproj snowflake://prod/SAMPLE_ANALYTICS
@@ -144,7 +144,7 @@ Open `deploy.sql`. Every non-SAFE operation is wrapped in `-- WARNING:` comments
 When the plan looks right, apply it:
 
 ```sh
-sdt publish --source ./SampleAnalytics.sdtproj --connection prod --apply --yes
+sdt publish --pac ./bin/SampleAnalytics.sdtpac --connection prod --apply --yes
 ```
 
 > [!WARNING]

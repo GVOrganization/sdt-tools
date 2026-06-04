@@ -55,13 +55,15 @@ A fuller example using most fields:
 ```
 
 > [!TIP]
-> The `$schema` field points your editor at the published JSON schema, so VS Code gives you field autocomplete and validation as you type.
+> The `$schema` field is a forward-looking hint for editors. Once the schema is
+> hosted at that URL, VS Code will offer field autocomplete and validation as you
+> type; the field is otherwise inert and safe to keep.
 
 ### Fields
 
 | Field | What it does | Notes / default |
 |---|---|---|
-| `$schema` | URL of the JSON schema | Triggers IDE autocomplete |
+| `$schema` | URL of the JSON schema | Advisory; enables IDE autocomplete once the schema is hosted |
 | `name` | Logical project name | Required. Used for the built `.sdtpac` filename |
 | `version` | Semver-style version | Required. Bumped manually |
 | `targetPlatform` | Compatibility hints (`platform`, `edition?`, `minBundle?`) | Required. `edition` and `minBundle` are advisory |
@@ -220,7 +222,7 @@ Later sources win:
 A `.sdtpac` is a portable, self-contained build artifact of your project — a ZIP container you can hand to CI, sign, archive, or deploy without the original source tree.
 
 ```sh
-sdt build ./MyProject.sdtproj
+sdt build -p ./MyProject.sdtproj
 # Built ./bin/AnalyticsDb.sdtpac   (named from the project's "name" field)
 ```
 

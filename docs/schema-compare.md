@@ -89,7 +89,7 @@ sdt compare ./MyProject.sdtproj 'snowflake://prod' --explain
 
 | Flag | What it does | Notes |
 |---|---|---|
-| `--format <fmt>` | Output format: `table`, `json`, `yaml`, `sql`, `markdown`. | Defaults to `table` for humans. |
+| `--format <fmt>` | Output format: `summary`, `json`, `markdown`. | Defaults to `summary` for humans. |
 | `--ignore-case` | Treat unquoted identifiers case-insensitively. | Useful when one side quotes identifiers and the other doesn't. |
 | `--explain` | Add AI narration of the diff. | Pro tier; requires a configured AI provider. |
 | `--color <when>` | `always` / `never` / `auto`. | `auto` honors the TTY and the `NO_COLOR` env var. |
