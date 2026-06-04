@@ -34,13 +34,19 @@ It is, in short, what Microsoft's SQL Database Projects / SqlPackage are for SQL
 
 ![Schema Compare demo](./assets/demo-compare.gif)
 
+▶ [Watch the 60-second demo on YouTube](https://youtu.be/8bfHNoG2rdc)
+
 **Deploys that refuse to destroy data silently** — destructive changes come out blocked as comments until you opt in, and a zero-copy clone makes every deploy one command away from rollback:
 
 ![Safe deploy demo](./assets/demo-deploy.gif)
 
+▶ [Watch the 60-second demo on YouTube](https://youtu.be/bhjOkE4fSiE)
+
 **Reverse-engineer an entire account in seconds** — one command, one `.sql` file per object, ready for git:
 
 ![Extract demo](./assets/demo-extract.gif)
+
+▶ [Watch the 60-second demo on YouTube](https://youtu.be/8aZ4P8WaRjM)
 
 ## Documentation
 
