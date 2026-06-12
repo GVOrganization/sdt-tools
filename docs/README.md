@@ -36,6 +36,7 @@
 | ✨ | **[AI features](ai-features.md)** | Bring-your-own-key setup, sketch from prose, safer alternatives, Ask SDT |
 | 🔁 | **[CI/CD integration](ci-cd.md)** | GitHub Actions, GitLab CI, Azure DevOps patterns; drift gates; PR comments |
 | 🚚 | **[Migrating from other tools](migrating.md)** | Coming from schemachange, dbt, Flyway/Liquibase, SqlPackage, or raw SQL |
+| ⚖️ | **[How SDT compares](comparisons/README.md)** | Honest side-by-sides: schemachange, SSDT/SqlPackage, DCM Projects, dbt |
 
 ## When something goes wrong
 
@@ -61,6 +62,7 @@
 | Set up AI features with my own API key | [AI features](ai-features.md) |
 | Find a command I can't remember | [CLI reference](cli-reference.md) — or run `sdt find <keyword>` / press <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>F</kbd> in VS Code |
 | Switch from schemachange / dbt / Flyway | [Migrating from other tools](migrating.md) |
+| Compare SDT against the tool I use today | [Comparisons](comparisons/README.md) |
 | Report a bug | [Troubleshooting → Still stuck?](troubleshooting.md) or [SUPPORT](../SUPPORT.md) |
 
 ---
